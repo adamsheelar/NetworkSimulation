@@ -1,0 +1,28 @@
+version: '3'
+services:
+  data:
+    build:
+      context: ./packet-generator
+      dockerfile: Dockerfile
+    ports:
+    - "2000:2000"
+
+    depends_on:
+      - api
+  api: 
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build:
+      context: ./React/hello-world
+      dockerfile: Dockerfile
+    ports:
+      - "4001:4001"
+
+    depends_on:
+      - api
+
