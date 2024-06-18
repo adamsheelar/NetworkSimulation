@@ -1,5 +1,4 @@
-# cs1980-Router-Simulator
-Capstone for CS1980 pitt 2024
+Router simulation, with frontend, backend, and restAPI
 
 Application developed in go, reactJS, docker
 To build clone repo, with docker installed run ```docker-compose up```
